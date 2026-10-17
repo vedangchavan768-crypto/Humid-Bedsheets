@@ -1,299 +1,241 @@
-<head>
-  <title>Humid Bedsheets</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Humid Bedsheets | Soft, Stylish, Long-lasting Bedsheets</title>
-<meta name="description" content="Premium, affordable bedsheets in soft fabrics and elegant patterns.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-/* ===== COLORS (your Coolors palette) ===== */
-:root{
-  --sage:#ccd5ae; --mist:#e9edc9; --cream:#fefae0; --peach:#faedcd; --tan:#d4a373;
-  --ink:#4a3622; --ink-soft:#7a6652; --tan-dark:#b5834f;
-  --head:'Fraunces',Georgia,serif; --body:'DM Sans',system-ui,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.6}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1180px,92%);margin:auto}
-section{padding:72px 0}
-h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.15}
-h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:10px}
-.sub{color:var(--ink-soft);max-width:560px;margin-bottom:36px}
-.btn{display:inline-block;background:var(--tan);color:#fff;padding:13px 28px;border-radius:50px;font-weight:700;border:0;cursor:pointer;transition:.25s}
-.btn:hover{background:var(--tan-dark)}
-.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
-.btn.alt:hover{background:var(--ink);color:var(--cream)}
-.ico{width:34px;height:34px;fill:none;stroke:var(--tan-dark);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Humid Bedsheets | Soft, Stylish, Long-lasting Bedsheets</title>
+    <meta
+      name="description"
+      content="Premium, affordable bedsheets in soft fabrics and elegant patterns."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute">
+      <symbol id="i-bed" viewBox="0 0 48 48">
+        <path d="M4 38V10M4 28h40v10M44 28v-6a6 6 0 0 0-6-6H20v12" />
+        <circle cx="11" cy="21" r="4" />
+      </symbol>
+      <symbol id="i-linen" viewBox="0 0 48 48">
+        <path d="M6 20c0-4 4-6 8-6h20c4 0 8 2 8 6v14H6z" />
+        <path d="M6 26h36M14 14v-4h20v4" />
+      </symbol>
+      <symbol id="i-bedding" viewBox="0 0 48 48">
+        <rect x="6" y="14" width="36" height="22" rx="4" />
+        <path d="M6 24h36M16 14v22M32 14v22" />
+      </symbol>
+      <symbol id="i-blanket" viewBox="0 0 48 48">
+        <path d="M8 12h32v24H8z" />
+        <path d="M8 18c6 4 10-4 16 0s10-4 16 0M8 28c6 4 10-4 16 0s10-4 16 0" />
+        <path d="M14 36v4M34 36v4" />
+      </symbol>
+      <symbol id="i-fold" viewBox="0 0 48 48">
+        <path d="M8 16l16-6 16 6v18l-16 6-16-6z" />
+        <path d="M8 16l16 6 16-6M24 22v18" />
+      </symbol>
+    </svg>
 
-/* 1. TOP BAR + HEADER */
-.topbar{background:var(--ink);color:var(--peach);text-align:center;font-size:.85rem;padding:8px 10px}
-header{background:var(--cream);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--peach)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
-.logo img{height:54px;width:auto}
-.menu{display:flex;gap:28px;list-style:none;font-weight:500}
-.menu a:hover{color:var(--tan-dark)}
-.icons{display:flex;gap:16px;align-items:center}
-.icons svg{width:24px;height:24px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.burger{display:none;background:none;border:0;cursor:pointer}
+    <div class="topbar">Free shipping on orders above ₹1,999 &nbsp;|&nbsp; Easy 7-day returns</div>
 
-/* 2. HERO */
-.hero{background:var(--peach);padding:0}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:40px;min-height:560px}
-.hero h1{font-size:clamp(2.2rem,5.5vw,3.8rem);margin-bottom:16px}
-.hero p{color:var(--ink-soft);max-width:480px;margin-bottom:28px}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-img{border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:0 20px 40px rgba(74,54,34,.15);background:var(--sage)}
-.hero-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:5/4.4}
+    <header>
+      <div class="wrap nav">
+        <a href="#" class="logo" aria-label="Humid Bedsheets home">
+          <img src="images/logo.png" alt="Humid Bedsheets logo" />
+        </a>
+        <ul class="menu" id="menu">
+          <li><a href="#categories">Shop</a></li>
+          <li><a href="#bestsellers">Best sellers</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="icons">
+          <a href="#" aria-label="Search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
+          </a>
+          <a href="#" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z" /></svg>
+          </a>
+          <a href="#" aria-label="Cart">
+            <svg viewBox="0 0 24 24"><path d="M3 4h3l2 11h10l2-8H7" /><circle cx="9" cy="19" r="1.3" /><circle cx="17" cy="19" r="1.3" /></svg>
+          </a>
+          <button class="burger" id="burger" aria-label="Menu">
+            <svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round">
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
 
-/* 3. CATEGORIES */
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.cat{background:var(--mist);border-radius:20px;padding:30px 20px;text-align:center;transition:.25s}
-.cat:hover{background:var(--sage);transform:translateY(-4px)}
-.cat .ico{width:48px;height:48px;margin:0 auto 12px}
-.cat h3{font-size:1.15rem}
-.cat span{font-size:.85rem;color:var(--ink-soft)}
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Sleep softer. Wake up to a prettier bedroom.</h1>
+          <p>
+            Premium bedsheets in breathable fabrics and elegant patterns, made to last wash after wash at prices that feel kind.
+          </p>
+          <div class="cta">
+            <a href="#bestsellers" class="btn">Shop bedsheets</a>
+            <a href="#about" class="btn alt">Our story</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="images/hero.jpg" alt="Floral bedsheet set on a modern bed" />
+        </div>
+      </div>
+    </section>
 
-/* 4. WHY US */
-.why{background:var(--sage)}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why-item{background:var(--cream);padding:28px 22px;border-radius:18px}
-.why-item .ico{margin-bottom:12px}
-.why-item h3{font-size:1.1rem;margin-bottom:6px}
-.why-item p{font-size:.92rem;color:var(--ink-soft)}
+    <section id="categories">
+      <div class="wrap">
+        <h2>Shop by category</h2>
+        <p class="sub">Everything you need to dress your bed, from everyday cotton to festive florals.</p>
+        <div class="cats">
+          <a href="#" class="cat"><svg class="ico"><use href="#i-bed" /></svg><h3>King size</h3><span>Bedsheet sets</span></a>
+          <a href="#" class="cat"><svg class="ico"><use href="#i-linen" /></svg><h3>Double bed</h3><span>Bedsheet sets</span></a>
+          <a href="#" class="cat"><svg class="ico"><use href="#i-blanket" /></svg><h3>Bed spreads</h3><span>Quilted &amp; light</span></a>
+          <a href="#" class="cat"><svg class="ico"><use href="#i-bedding" /></svg><h3>Pillow covers</h3><span>Pairs &amp; sets</span></a>
+        </div>
+      </div>
+    </section>
 
-/* 5. BEST SELLERS */
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(74,54,34,.08)}
-.card .pic{position:relative;aspect-ratio:1/1;background:var(--peach);display:grid;place-items:center}
-.card .pic svg{width:90px;height:90px}
-.card .tag{position:absolute;top:12px;left:12px;background:var(--tan);color:#fff;font-size:.75rem;padding:3px 12px;border-radius:20px}
-.card .add{width:100%;border:0;background:var(--mist);padding:13px;font:700 .95rem var(--body);color:var(--ink);cursor:pointer;transition:.2s}
-.card .add:hover{background:var(--tan);color:#fff}
-.card .info{padding:16px}
-.card h3{font-size:1rem;margin-bottom:4px}
-.price{font-weight:700;color:var(--tan-dark)}
-.price s{color:var(--ink-soft);font-weight:400;margin-left:6px;font-size:.85rem}
-.center{text-align:center;margin-top:36px}
+    <section class="why">
+      <div class="wrap">
+        <h2>Why people choose Humid</h2>
+        <p class="sub">Comfort you can feel, quality you can trust.</p>
+        <div class="why-grid">
+          <div class="why-item"><svg class="ico"><use href="#i-blanket" /></svg><h3>Soft fabrics</h3><p>Breathable cotton that feels gentle on skin, even in warm weather.</p></div>
+          <div class="why-item"><svg class="ico"><use href="#i-bedding" /></svg><h3>Elegant patterns</h3><p>Florals, solids and prints picked to match modern bedrooms.</p></div>
+          <div class="why-item"><svg class="ico"><use href="#i-linen" /></svg><h3>Built to last</h3><p>Strong stitching and fade-resistant colors that survive many washes.</p></div>
+          <div class="why-item"><svg class="ico"><use href="#i-fold" /></svg><h3>Fair prices</h3><p>Premium quality without the premium markup.</p></div>
+        </div>
+      </div>
+    </section>
 
-/* 6. ABOUT */
-.about{background:var(--mist)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.about-img{border-radius:24px;overflow:hidden;background:var(--sage)}
-.about-img img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
-.about p{color:var(--ink-soft);margin-bottom:16px}
-.stats{display:flex;gap:32px;margin-top:20px}
-.stats b{font:600 1.8rem var(--head);display:block;color:var(--tan-dark)}
+    <section id="bestsellers">
+      <div class="wrap">
+        <h2>Best sellers</h2>
+        <p class="sub">The sets our customers reorder again and again.</p>
+        <div class="products">
+          <article class="card">
+            <div class="pic"><span class="tag">New</span><img src="images/bedsheet-1.jpg" alt="Blossom Sage King Bedsheet Set" /></div>
+            <button class="add">Add to cart</button>
+            <div class="info">
+              <h3>Blossom Sage King Bedsheet Set</h3>
+              <p class="price">₹2,499 <s>₹2,999</s></p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic"><img src="images/bedsheet-2.jpg" alt="Sand Dune Double Bedsheet Set" /></div>
+            <button class="add">Add to cart</button>
+            <div class="info">
+              <h3>Sand Dune Double Bedsheet Set</h3>
+              <p class="price">₹1,899 <s>₹2,299</s></p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic"><span class="tag">Sale</span><img src="images/bedsheet-3.jpg" alt="Ivory Dream King Bedsheet Set" /></div>
+            <button class="add">Add to cart</button>
+            <div class="info">
+              <h3>Ivory Dream King Bedsheet Set</h3>
+              <p class="price">₹2,699 <s>₹3,199</s></p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic"><img src="images/bedsheet-1.jpg" alt="Meadow Quilted Bed Spread" /></div>
+            <button class="add">Add to cart</button>
+            <div class="info">
+              <h3>Meadow Quilted Bed Spread</h3>
+              <p class="price">₹2,199 <s>₹2,699</s></p>
+            </div>
+          </article>
+        </div>
+        <div class="center"><a href="#" class="btn alt">View all products</a></div>
+      </div>
+    </section>
 
-/* 7. REVIEWS */
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.review{background:var(--peach);padding:28px;border-radius:18px}
-.stars{color:var(--tan-dark);letter-spacing:3px;margin-bottom:8px}
-.review p{margin-bottom:14px}
-.review b{font-size:.9rem}
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="about-img"><img src="images/hero.jpg" alt="Humid bedsheets styled in a bedroom" /></div>
+        <div>
+          <h2>Made for better nights and prettier bedrooms</h2>
+          <p>At Humid Bedsheets we combine comfort, style and durability. Our collection features beautiful designs, soft fabrics and elegant patterns that lift your bedroom décor.</p>
+          <p>Our goal is simple: premium quality at affordable prices, so every night is more comfortable and every bedroom more beautiful.</p>
+          <div class="stats">
+            <div><b>50+</b><span>Designs</span></div>
+            <div><b>10k+</b><span>Happy sleepers</span></div>
+            <div><b>100%</b><span>Soft cotton</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* 8. NEWSLETTER */
-.news{background:var(--tan);color:#fff;text-align:center}
-.news p{margin:0 auto 24px;max-width:480px}
-.news form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.news input{padding:14px 22px;border-radius:50px;border:0;min-width:280px;font:1rem var(--body);background:var(--cream)}
-.news .btn{background:var(--ink)}
-.news .btn:hover{background:#2e2013}
+    <section id="reviews">
+      <div class="wrap">
+        <h2>Loved by our customers</h2>
+        <p class="sub">Real words from real bedrooms.</p>
+        <div class="reviews">
+          <div class="review"><div class="stars">★★★★★</div><p>The fabric is so soft and the print looks even better in person. Washed many times and still no fading.</p><b>Priya S., Pune</b></div>
+          <div class="review"><div class="stars">★★★★★</div><p>Great value. My king bed set fits perfectly and the pillow covers match beautifully.</p><b>Rahul M., Delhi</b></div>
+          <div class="review"><div class="stars">★★★★★</div><p>Ordered for a gift and the whole family wanted one. Fast delivery too.</p><b>Ananya K., Bengaluru</b></div>
+        </div>
+      </div>
+    </section>
 
-/* 9. FOOTER */
-footer{background:var(--ink);color:var(--peach);padding:56px 0 20px}
-.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
-footer img{height:50px;margin-bottom:12px;background:var(--cream);padding:6px 10px;border-radius:10px}
-footer h4{font-family:var(--head);margin-bottom:12px;color:var(--sage)}
-footer ul{list-style:none}
-footer li{margin-bottom:8px;font-size:.92rem}
-footer a:hover{color:var(--tan)}
-.copy{border-top:1px solid rgba(250,237,205,.2);margin-top:36px;padding-top:18px;text-align:center;font-size:.85rem}
+    <section class="news">
+      <div class="wrap">
+        <h2>Get 10% off your first order</h2>
+        <p>Join our list for new patterns, offers and bedroom styling ideas.</p>
+        <form>
+          <input type="email" placeholder="Your email address" aria-label="Email address" required />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
 
-/* RESPONSIVE */
-@media(max-width:960px){
-  .cats,.why-grid,.products{grid-template-columns:repeat(2,1fr)}
-  .reviews{grid-template-columns:1fr}
-  .foot{grid-template-columns:1fr 1fr}
-}
-@media(max-width:760px){
-  section{padding:52px 0}
-  .burger{display:block}
-  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px 4%;gap:14px;border-bottom:1px solid var(--peach)}
-  .menu.open{display:flex}
-  .hero .wrap,.about .wrap{grid-template-columns:1fr}
-  .hero .wrap{padding:40px 0;min-height:0}
-  .hero-img{border-radius:120px 120px 20px 20px}
-  .products{gap:14px}
-}
-@media(max-width:480px){
-  .cats,.why-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .foot{grid-template-columns:1fr}
-  .stats{gap:20px}
-  .news input{min-width:100%}
-}
-</style>
-</head>
-<body>
+    <footer id="contact">
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <img src="images/logo.png" alt="Humid Bedsheets" />
+            <p style="font-size:.92rem;max-width:300px">Soft, stylish and long-lasting bedsheets at honest prices.</p>
+          </div>
+          <div>
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">King size</a></li>
+              <li><a href="#">Double bed</a></li>
+              <li><a href="#">Bed spreads</a></li>
+              <li><a href="#">Pillow covers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Care guide</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li>hello@humidbedsheets.com</li>
+              <li>+91 00000 00000</li>
+              <li>Mon–Sat, 10am–6pm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">© 2026 Humid Bedsheets. All rights reserved.</div>
+      </div>
+    </footer>
 
-<!-- SVG icons (reusable). Replace with your Flaticon downloads if you prefer -->
-<svg width="0" height="0" style="position:absolute">
-  <symbol id="i-bed" viewBox="0 0 48 48"><path d="M4 38V10M4 28h40v10M44 28v-6a6 6 0 0 0-6-6H20v12"/><circle cx="11" cy="21" r="4"/></symbol>
-  <symbol id="i-linen" viewBox="0 0 48 48"><path d="M6 20c0-4 4-6 8-6h20c4 0 8 2 8 6v14H6z"/><path d="M6 26h36M14 14v-4h20v4"/></symbol>
-  <symbol id="i-bedding" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="22" rx="4"/><path d="M6 24h36M16 14v22M32 14v22"/></symbol>
-  <symbol id="i-blanket" viewBox="0 0 48 48"><path d="M8 12h32v24H8z"/><path d="M8 18c6 4 10-4 16 0s10-4 16 0M8 28c6 4 10-4 16 0s10-4 16 0"/><path d="M14 36v4M34 36v4"/></symbol>
-  <symbol id="i-fold" viewBox="0 0 48 48"><path d="M8 16l16-6 16 6v18l-16 6-16-6z"/><path d="M8 16l16 6 16-6M24 22v18"/></symbol>
-</svg>
-
-<!-- 1. TOP BAR + HEADER -->
-<div class="topbar">Free shipping on orders above ₹1,999 &nbsp;|&nbsp; Easy 7-day returns</div>
-<header>
-  <div class="wrap nav">
-    <a href="#" class="logo"><img src="images/logo.png" alt="Humid Bedsheets logo"></a>
-    <ul class="menu" id="menu">
-      <li><a href="#categories">Shop</a></li>
-      <li><a href="#bestsellers">Best sellers</a></li>
-      <li><a href="#about">About us</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="icons">
-      <a href="#" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
-      <a href="#" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg></a>
-      <a href="#" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M3 4h3l2 11h10l2-8H7"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg></a>
-      <button class="burger" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    </div>
-  </div>
-</header>
-
-<!-- 2. HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <h1>Sleep softer. Wake up to a prettier bedroom.</h1>
-      <p>Premium bedsheets in breathable fabrics and elegant patterns, made to last wash after wash at prices that feel kind.</p>
-      <div class="cta"><a href="#bestsellers" class="btn">Shop bedsheets</a><a href="#about" class="btn alt">Our story</a></div>
-    </div>
-    <div class="hero-img"><img src="images/hero.jpg" alt="Floral bedsheet set on a modern bed"></div>
-  </div>
-</section>
-
-<!-- 3. CATEGORIES -->
-<section id="categories">
-  <div class="wrap">
-    <h2>Shop by category</h2>
-    <p class="sub">Everything you need to dress your bed, from everyday cotton to festive florals.</p>
-    <div class="cats">
-      <a href="#" class="cat"><svg class="ico"><use href="#i-bed"/></svg><h3>King size</h3><span>Bedsheet sets</span></a>
-      <a href="#" class="cat"><svg class="ico"><use href="#i-linen"/></svg><h3>Double bed</h3><span>Bedsheet sets</span></a>
-      <a href="#" class="cat"><svg class="ico"><use href="#i-blanket"/></svg><h3>Bed spreads</h3><span>Quilted &amp; light</span></a>
-      <a href="#" class="cat"><svg class="ico"><use href="#i-bedding"/></svg><h3>Pillow covers</h3><span>Pairs &amp; sets</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- 4. WHY CHOOSE US -->
-<section class="why">
-  <div class="wrap">
-    <h2>Why people choose Humid</h2>
-    <p class="sub">Comfort you can feel, quality you can trust.</p>
-    <div class="why-grid">
-      <div class="why-item"><svg class="ico"><use href="#i-blanket"/></svg><h3>Soft fabrics</h3><p>Breathable cotton that feels gentle on skin, even in warm weather.</p></div>
-      <div class="why-item"><svg class="ico"><use href="#i-bedding"/></svg><h3>Elegant patterns</h3><p>Florals, solids and prints picked to match modern bedrooms.</p></div>
-      <div class="why-item"><svg class="ico"><use href="#i-linen"/></svg><h3>Built to last</h3><p>Strong stitching and fade-resistant colors that survive many washes.</p></div>
-      <div class="why-item"><svg class="ico"><use href="#i-fold"/></svg><h3>Fair prices</h3><p>Premium quality without the premium markup.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. BEST SELLERS -->
-<section id="bestsellers">
-  <div class="wrap">
-    <h2>Best sellers</h2>
-    <p class="sub">The sets our customers reorder again and again.</p>
-    <div class="products">
-      <article class="card"><div class="pic"><span class="tag">New</span><svg class="ico"><use href="#i-bed"/></svg></div><button class="add">Add to cart</button><div class="info"><h3>Blossom Sage King Bedsheet Set</h3><p class="price">₹1,799</p></div></article>
-      <article class="card"><div class="pic"><svg class="ico"><use href="#i-linen"/></svg></div><button class="add">Add to cart</button><div class="info"><h3>Sand Dune Double Bedsheet Set</h3><p class="price">₹1,299 <s>₹1,699</s></p></div></article>
-      <article class="card"><div class="pic"><span class="tag">Sale</span><svg class="ico"><use href="#i-bedding"/></svg></div><button class="add">Add to cart</button><div class="info"><h3>Ivory Dream King Bedsheet Set</h3><p class="price">₹1,999</p></div></article>
-      <article class="card"><div class="pic"><svg class="ico"><use href="#i-blanket"/></svg></div><button class="add">Add to cart</button><div class="info"><h3>Meadow Quilted Bed Spread</h3><p class="price">₹2,499</p></div></article>
-    </div>
-    <div class="center"><a href="#" class="btn alt">View all products</a></div>
-  </div>
-</section>
-
-<!-- 6. ABOUT -->
-<section class="about" id="about">
-  <div class="wrap">
-    <div class="about-img"><img src="images/hero.jpg" alt="Humid bedsheets styled in a bedroom"></div>
-    <div>
-      <h2>Made for better nights and prettier bedrooms</h2>
-      <p>At Humid Bedsheets we combine comfort, style and durability. Our collection features beautiful designs, soft fabrics and elegant patterns that lift your bedroom décor.</p>
-      <p>Our goal is simple: premium quality at affordable prices, so every night is more comfortable and every bedroom more beautiful.</p>
-      <div class="stats"><div><b>50+</b>Designs</div><div><b>10k+</b>Happy sleepers</div><div><b>100%</b>Soft cotton</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. REVIEWS -->
-<section id="reviews">
-  <div class="wrap">
-    <h2>Loved by our customers</h2>
-    <p class="sub">Real words from real bedrooms.</p>
-    <div class="reviews">
-      <div class="review"><div class="stars">★★★★★</div><p>The fabric is so soft and the print looks even better in person. Washed many times and still no fading.</p><b>Priya S., Pune</b></div>
-      <div class="review"><div class="stars">★★★★★</div><p>Great value. My king bed set fits perfectly and the pillow covers match beautifully.</p><b>Rahul M., Delhi</b></div>
-      <div class="review"><div class="stars">★★★★★</div><p>Ordered for a gift and the whole family wanted one. Fast delivery too.</p><b>Ananya K., Bengaluru</b></div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. NEWSLETTER -->
-<section class="news">
-  <div class="wrap">
-    <h2>Get 10% off your first order</h2>
-    <p>Join our list for new patterns, offers and bedroom styling ideas.</p>
-    <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed!'">
-      <input type="email" placeholder="Your email address" aria-label="Email address" required>
-      <button class="btn" type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- 9. FOOTER -->
-<footer id="contact">
-  <div class="wrap">
-    <div class="foot">
-      <div><img src="images/logo.png" alt="Humid Bedsheets"><p style="font-size:.92rem;max-width:300px">Soft, stylish and long-lasting bedsheets at honest prices.</p></div>
-      <div><h4>Shop</h4><ul><li><a href="#">King size</a></li><li><a href="#">Double bed</a></li><li><a href="#">Bed spreads</a></li><li><a href="#">Pillow covers</a></li></ul></div>
-      <div><h4>Help</h4><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Care guide</a></li><li><a href="#">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>hello@humidbedsheets.com</li><li>+91 00000 00000</li><li>Mon–Sat, 10am–6pm</li></ul></div>
-    </div>
-    <div class="copy">© 2026 Humid Bedsheets. All rights reserved.</div>
-  </div>
-</footer>
-
-<script>
-document.getElementById('burger').addEventListener('click',function(){document.getElementById('menu').classList.toggle('open')});
-document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open')})});
-</script>
-</body>
-</html>
-<article class="card"><div class="pic"><span class="tag">New</span><img src="images/bedsheet-1.jpg" alt="Blossom Sage King Bedsheet Set"></div><button class="add">Add to cart</button><div class="info"><h3>Blossom Sage King Bedsheet Set</h3><p class="price">₹1,799</p></div></article>
-
-<article class="card"><div class="pic"><img src="images/bedsheet-2.jpg" alt="Sand Dune Double Bedsheet Set"></div><button class="add">Add to cart</button><div class="info"><h3>Sand Dune Double Bedsheet Set</h3><p class="price">₹1,299 <s>₹1,699</s></p></div></article>
-
-<article class="card"><div class="pic"><span class="tag">Sale</span><img src="images/bedsheet-3.jpg" alt="Ivory Dream King Bedsheet Set"></div><button class="add">Add to cart</button><div class="info"><h3>Ivory Dream King Bedsheet Set</h3><p class="price">₹1,999</p></div></article>
-
-<article class="card"><div class="pic"><img src="images/bedsheet-1.jpg" alt="Meadow Quilted Bed Spread"></div><button class="add">Add to cart</button><div class="info"><h3>Meadow Quilted Bed Spread</h3><p class="price">₹2,499</p></div></article>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
